@@ -1,0 +1,126 @@
+.eventInfoSection{
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: $zh;
+    position: relative; 
+    background-color: rgba($color:#efe5fa, $alpha: 0.6);
+    .eventPic{
+        width: 100%;
+    }
+    .eventInfoArea{
+        box-sizing: border-box;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: #ccc;
+            bottom: 0;
+            right: 0;
+            left: 0;
+          
+        }
+    }
+    .eventBtnArea{
+        display: flex;
+        margin: 1rem;
+        justify-content: space-between;
+    }
+    .eventTitle,.eventDetail{
+        padding: 5%;
+        h2{text-align: center;
+            padding: 1rem;
+        }
+        span{
+            display: block;
+            padding: 0.6rem 1rem;
+            line-height: 1.3;
+        }
+        .redButton{
+            
+            @include button;
+        }
+    }
+    .eventHost{
+        padding: 5%;
+        text-align: center;
+        h2{
+            padding: 1rem;
+        }
+        .hostName{
+            padding: 0.6rem 1rem;
+        }
+        .imgWrap{
+            width: 200px;
+            margin: 0 auto;
+        }
+        .contactButton{
+            @include button;
+        }
+    }
+     .otherEvent{
+        padding: 1.25rem;
+        h2{
+            text-align: center;
+            padding: 1rem;
+        }
+        .eventCard{
+            position: relative;
+            z-index: 10;
+        }
+    }
+}
+
+
+
+@media screen and(min-width:1200px){
+ 
+
+
+}
+
+
+@media screen and(min-width:992px){
+    .eventInfoArea{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.25rem;        
+    }
+    .otherEventList{
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        .wrap{
+            padding: 20px;  
+        }
+    }
+.container{
+    .eventBgImg{
+        width: 30%;
+        position: absolute;
+        bottom: 0;
+        left: -30%;
+        z-index: 4;
+        &:last-child{
+            bottom: -15%;
+            z-index: 1;
+        }  
+    }
+}
+    
+}
+.container{
+    .eventBgImg{    
+    width: 20vmin;
+    position: absolute;
+    bottom: 0;
+    left: -1vmin;
+    z-index: 4;
+    &:last-child{
+        bottom: -23vmin;
+        z-index: 1;
+    }  
+}
+}
